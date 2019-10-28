@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Projects index{% endblock %}
+
+{% block body %}
+<table class="table">
+    <h1>  {{ projects|length }} Projets </h1>
+    
+    <ul>
+        {% for i in 0..projects|length-1 %}
+            <li> {{ projects[i] }} </li>
+        {% endfor %}
+    </ul>
+
+<p> The current projects are {{ [projects[0], projects[1], projects[2]]|join(', ', ' and ') }} </p>
+{% endblock %}
